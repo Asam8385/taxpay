@@ -1,4 +1,3 @@
-
 const mongoose = require('mongoose');
 
 const verificationSchema = new mongoose.Schema({
@@ -18,7 +17,10 @@ const verificationSchema = new mongoose.Schema({
     yearManu: String,
     status: Boolean, 
     numplateimage: String,
-    testid: String
+    email: String,
+    testid: String,
+    startDate: { type: Date, required: true }, // Start date of verification
+    expiryDate: { type: Date, required: true } // Expiry date of verification
 });
 
 const Verification = mongoose.model('Verification', verificationSchema);
