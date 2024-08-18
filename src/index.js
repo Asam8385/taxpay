@@ -25,6 +25,10 @@ app.use('/otp', otpRoutes);
 app.use('/user', userRoutes);
 
 
+app.get('/',(req, res) =>{
+
+  res.end("hello world");
+})
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;
